@@ -1,12 +1,15 @@
-import React, { ReactNode } from "react";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
+
+import React, { ReactNode, useEffect, useState } from "react";
 import "./style.css";
 
 interface Props {
     children: ReactNode;
 }
 
-const Card = ({ children }: Props) => {
+const ButtonCard = ({ children }: Props) => {
     return <button>{children}</button>;
 };
 
-export default Card;
+export default ButtonCard;

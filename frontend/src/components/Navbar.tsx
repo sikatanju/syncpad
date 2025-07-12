@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import ThemeButton from "../../public/components/Theme/ThemeButton";
-import { Button } from "./ui/button";
+import ThemeButton from "./Theme/ThemeButton";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -9,27 +8,20 @@ import {
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuSeparator,
-    DropdownMenuShortcut,
     DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import ButtonCard from "./ButtonCard/ButtonCard";
 
-interface Props {
-    active: string[] | null | undefined;
-}
-
-const Navbar = ({ active }: Props) => {
+const Navbar = () => {
     return (
         <nav className="p-4 flex justify-between items-center">
             <div className="font-bold text-3xl">Syncpad</div>
+            <div className="invisible">
+                <ButtonCard>Menu</ButtonCard>
+            </div>
             <div className="flex justify-between gap-3 items-center">
-                {active?.map((ac) => (
-                    <div key={ac}>{ac}</div>
-                ))}
-                <ThemeButton />
                 <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline">Open</Button>
-                    </DropdownMenuTrigger>
+                    <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
                     <DropdownMenuContent>
                         <DropdownMenuLabel>Account</DropdownMenuLabel>
                         <DropdownMenuGroup>

@@ -2,9 +2,7 @@ button {
     background-color: rgb(202, 202, 202);
     color: black;
     border-radius: 10em;
-    font-size: 14px;
     font-weight: 600;
-    padding: 1em 2em;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border: 1px solid black;
@@ -19,4 +17,24 @@ button:hover {
 button:active {
     transform: translateY(2px) translateX(1px);
     box-shadow: 0 0 0 0 rgb(231, 214, 214);
+}
+
+@media (max-width: 425px) {
+    button {
+        font-size: 12px;
+        padding: 0.6em 1.2em;
+    }
+}
+
+@media (min-width: 426px) {
+    button {
+        font-size: 13px;
+        padding: 0.8rem 1.6rem;
+    }
+}
+@media (min-width: 768px) {
+    button {
+        font-size: 14px;
+        padding: 1em 2em;
+    }
 }
